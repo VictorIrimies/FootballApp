@@ -1,0 +1,22 @@
+﻿@model List<Models.Match>
+<br>
+<br>
+<div class="container-sm text-white bg-dark w-50 p-3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align:center; font-size: 20px; margin-left: 350px;">
+    @foreach (var match in Model)
+    {
+        <div class="row">
+            <div class="col-sm">
+                @match.Team1.Name
+            </div>
+            <div class="col-sm">
+                @(match.Team1Goals?.Count ?? 0) - @(match.Team2Goals?.Count ?? 0)
+            </div>
+            <div class="col-sm">
+                @match.Team2.Name
+            </div>
+        </div>
+        <hr>
+    }
+
+
+</div>

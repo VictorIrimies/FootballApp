@@ -1,0 +1,36 @@
+﻿@model Models.ViewModels.Totals
+<link href ="~/css/tabel.css" rel="stylesheet" />
+<br>
+<br>
+
+<ul class="list-group" style="max-width: 850px; margin-left: 250px; text-align: center;">
+    <li class="list-group-item text-black d-flex justify-content-between align-items-center" style="background-color: #e06e52; ">
+        GOALS
+        <span class="badge bg-dark text-white rounded-pill" style="font-size: 20px;">@Model.TotalGoals</span>
+    </li>
+    <li class="list-group-item  text-black d-flex justify-content-between align-items-center" style="background-color: #e06e52;">
+        YELLOW CARDS
+        <span class="badge bg-dark text-white rounded-pill" style="font-size: 20px;">@Model.TotalYCards</span>
+    </li>
+    <li class="list-group-item  text-black d-flex justify-content-between align-items-center" style="background-color: #e06e52;">
+        RED CARDS
+        <span class="badge bg-dark text-white rounded-pill" style="font-size: 20px;">@Model.TotalRCards</span>
+    </li>
+    <li class="list-group-item  text-black d-flex justify-content-between align-items-center" style="background-color: #e06e52;">
+        CORNERS
+        <span class="badge bg-dark text-white rounded-pill" style="font-size: 20px;">@Model.TotalCorners</span>
+    </li>
+    <li class="list-group-item  text-black d-flex justify-content-between align-items-center" style="background-color: #e06e52;">
+        FOULS
+        <span class="badge bg-dark text-white rounded-pill" style="font-size: 20px;">@Model.TotalFouls</span>
+    </li>
+    <li class="list-group-item  text-black d-flex justify-content-between align-items-center" style="background-color: #e06e52;">
+        OFFSIDES
+        <span class="badge bg-dark text-white rounded-pill" style="font-size: 20px;">@Model.TotalOffsides</span>
+    </li>
+    <li class="list-group-item text-black d-flex justify-content-between align-items-center" style="background-color: #e06e52;">
+        GK SAVES
+        <span class="badge bg-dark text-white rounded-pill" style="font-size: 20px;">@Model.TotalGKSaves</span>
+    </li>
+
+</ul>

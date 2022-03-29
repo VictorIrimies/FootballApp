@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220115081937_newmodels.cs" />
+    <Compile Remove="Migrations\20220115081937_newmodels.Designer.cs" />
+    <Compile Remove="Migrations\20220115082549_newmodels.cs" />
+    <Compile Remove="Migrations\20220115082549_newmodels.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.40" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.22" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.22" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="3.1.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Data\Initializer\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AplicatieFotbal.Models\AplicatieFotbal.Models.csproj" />
+    <ProjectReference Include="..\AplicatieFotbal.Utility\AplicatieFotbal.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

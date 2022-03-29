@@ -1,0 +1,28 @@
+﻿@model List<Models.Team>
+<br>
+<br>
+
+<table class="table table-dark" style="max-width: 500px; margin-left: 400px; text-align: center;">
+    <thead>
+        <tr>
+            <th scope="col">Pos</th>
+            <th scope="col">Team</th>
+            <th scope="col">RED CARDS</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int pos = 1;
+            foreach (var team in Model)
+            {
+            <tr>
+                <th scope="row">@(pos++)</th>
+                <td>@team.Name</td>
+                <td>@team.NumberOfRCards</td>
+            </tr>
+
+                }
+            }
+
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.40" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AplicatieFotbal.Models\AplicatieFotbal.Models.csproj" />
+    <ProjectReference Include="..\AplicatieFotbal.Utility\AplicatieFotbal.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

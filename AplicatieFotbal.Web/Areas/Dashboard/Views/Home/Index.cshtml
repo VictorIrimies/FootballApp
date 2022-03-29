@@ -1,0 +1,81 @@
+﻿@model List<Models.League>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkred;">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 25px;">FOOTBALL 24/7</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<input id="startDate" type="date" />
+<input id="endDate" type="date" />
+<button id="btnGetData">Get Data</button>
+<br>
+<br>
+
+
+
+<table class="table text-white">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">LEAGUE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int pos = 1;
+            foreach (var league in Model)
+            {
+
+                <tr>
+                    <th scope="row">@(pos++)</th>
+                    <td>
+                        <a asp-area="Dashboard" asp-controller="League" asp-action="Index" asp-route-leagueId="@league.Id" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" id="@league.Id" class="leagueStatistics">@league.Name</a>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+            }
+        }
+    </tbody>
+</table>
+
+
+
+
+
+@section Scripts{
+
+    <script>
+        $("#btnGetData").click(function () {
+            var startDate = $("#startDate").val();
+            var endDate = $("#endDate").val();
+
+            console.log(startDate,endDate);
+
+            $.ajax({
+                type: "GET",
+                data: { startDate: startDate, endDate: endDate },
+                url: "@Url.Action("GetData")",
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+        });
+
+        $(".leagueStatistics").click(function () {
+            var leagueId = $(this).attr("id");
+
+        });
+
+    </script>
+
+}
+
